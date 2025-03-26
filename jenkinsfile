@@ -48,7 +48,7 @@ pipeline {                                    // 1  // Defines the start of the 
         stage("Quality Gate") {               // 11  // Creates a stage named 'Quality Gate'
             steps {                           // 12  // Defines the steps that will be executed in this stage
                 script {                      // 13  // Allows running custom Groovy script inside the pipeline
-                    timeout(time: 1, unit: 'HOURS') {  
+                    timeout(time: 5, unit: 'MINUTES') {  
                                               // Sets a timeout of 1 hour for the quality gate check
                         def qg = waitForQualityGate()  
                                               // Waits for the quality gate result from SonarQube
@@ -62,4 +62,4 @@ pipeline {                                    // 1  // Defines the start of the 
             }                                 // 12  // Ends the steps block for 'Quality Gate' stage
         }                                     // 11  // Ends the 'Quality Gate' stage
     }                                         // 3  // Ends the stages block
-}                                             // 1  // Ends the pipeline block
+}                                             // 1  // Ends the pipeline blok
