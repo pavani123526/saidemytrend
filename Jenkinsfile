@@ -39,7 +39,10 @@ pipeline {                                    // 1  // Defines the start of the 
             steps {                           // 10  // Defines the steps that will be executed in this stage
                 withSonarQubeEnv('saidemy-sonarqube-server') {
                                               // Executes the SonarQube analysis within the SonarQube environment
-                    sh 'mvn sonar:sonar -Dsonar.projectKey=your-project-key'  
+                    mvn sonar:sonar \
+                    -Dsonar.projectKey=saidemy01-keyy_saidemytrend \
+                    -Dsonar.organization=saidemy01-keyy
+            '''  
                                               // Runs the SonarQube scanner tool
                 }                             // Ends the withSonarQubeEnv block
             }                                 // 10  // Ends the steps block for 'SonarQube analysis' stage
