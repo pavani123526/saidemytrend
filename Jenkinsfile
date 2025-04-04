@@ -43,7 +43,7 @@ pipeline {
                     sh '''
                         mvn sonar:sonar \
                             -Dsonar.projectKey=saidemy01-keyys_saidemytrend \
-                            -Dsonar.organization=saidemy01
+                            -Dsonar.organization=saidemy01-keyys
                     '''
                 }
             }
