@@ -42,8 +42,8 @@ pipeline {
                 withSonarQubeEnv('saidemy-sonarqube-server') {
                     sh '''
                         mvn sonar:sonar \
-                            -Dsonar.projectKey=saidemy01-keyy_saidemytrend \
-                            -Dsonar.organization=saidemy01-keyy
+                            -Dsonar.projectKey=saidemy01-keyys_saidemytrend \
+                            -Dsonar.organization=saidemy01
                     '''
                 }
             }
